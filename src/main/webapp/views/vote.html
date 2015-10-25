@@ -1,0 +1,50 @@
+<div ng-controller="votingController">
+
+	<div class="row">
+		<div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+				<img class="media-object" src="/images/theywill.jpg" alt="Oni pójdą...">
+				<div class="caption">
+					<h2 class="media-heading">Oni pójdą na wybory</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+				<img class="media-object" src="/images/tusk.jpg" alt="Oni pójdą...">
+				<div class="caption">
+					<h2 class="media-heading">Donald Tusk, Nocna zmiana</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+				<img class="media-object" src="/images/tasmy.jpeg" alt="...">
+				<div class="caption">
+					<h2 class="media-heading">"Państwo Polskie istnieje tylko teoretycznie" - Bartłomiej Sienkiewicz, 2013</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-primary">
+		<div class="panel-heading">Zagłosuj!</div>
+		<form style="margin-left: 30%;">
+			<h3>Wybierz partię: </h3>
+			<select ng-model="selectedParty">
+				<option ng-repeat="party in parties track by $index" value="{{parties[$index]}}">{{party}}</option>
+			</select>
+			<br />
+			<br />
+			<div id="messages" style="width: 170px;">
+				<div class="alert alert-danger" role="alert" ng-show="isDisasterChoosen()">{{dangerMessage}}</div>
+				<div class="alert alert-warning" role="alert" ng-show="isPISchoosen()">{{warningMessage}}</div>
+			</div>
+			<button value="Głosuj!" ng-click="vote()" class="btn btn-success">Głosuj</button>
+		</form>
+
+	</div>
+
+</div>

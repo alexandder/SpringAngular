@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" media="screen" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" media="screen" href="lib/bootstrap/css/bootstrap-theme.min.css">
+
+	<script src="lib/jquery/jquery-2.1.4.min.js" ></script>
+	<script src="lib/angularjs/angular.min.js" ></script>
+	<script src="lib/angularjs/angular-route.min.js" ></script>
+	<script src="lib/bootstrap/js/bootstrap.min.js" ></script>
+
+	<script src="javascript/applicationController.js" ></script>
+	<script src="javascript/votingController.js" ></script>
+	<script src="javascript/korwinController.js" ></script>
+	<script src="javascript/kukizController.js" ></script>
+
+	<title>Angular/Spring Demo</title>
+</head>
+<body ng-app="generalElection">
+
+	<div class="jumbotron">
+		<div style="margin-left: 200px;">
+			<h1>Wybory 2015</h1>
+			<p>
+				<h3>Zagłosuj!</h3>
+			</p>
+			<p><a class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Learn more
+			</a></p>
+		</div>
+
+		<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<p>
+						Spring, Hibernate, Angular, <a href="http://getbootstrap.com/components/">Bootstrap</a> demo.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div ng-view></div>
+</body>
+</html>
